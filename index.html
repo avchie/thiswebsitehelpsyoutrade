@@ -2550,7 +2550,8 @@ function performClearAllTradeData(){
   refresh();
 }
 
-let shownMonth=8,shownYear=2026,trades=loadLocalTrades();
+const journalToday=new Date();
+let shownMonth=journalToday.getMonth(),shownYear=journalToday.getFullYear(),trades=loadLocalTrades();
 function money(n){return`${n>0?"+":n<0?"-":""}$${Math.abs(n).toLocaleString(undefined,{maximumFractionDigits:2})}`}
 
 function isTradeRecord(t){return !t || t.kind!=="adjustment"}
@@ -3090,7 +3091,7 @@ function importCSV(e){
   function isBrokerAdjustment(summary){return /(commission|funding|financing|admin fee|administration fee|dividend|stock borrowing|guaranteed stop|correction|other adjustment)/i.test(String(summary||""))}
 
   function processRows(rows){
-    if(rows.length<1)return siteNotice("No trade rows were found in this file.");
+    if(rows.length<1)return siteNotice("Importing error.");
     // Broker exports sometimes contain title/preamble rows, or malformed XLSX metadata can
     // cause the first header row to be omitted by a spreadsheet reader. Detect the real
     // header instead of assuming row 1 is always it.
@@ -3148,7 +3149,7 @@ function importCSV(e){
     }
     let idx={};Object.keys(aliases).forEach(k=>idx[k]=col(k));
     let required=["date","symbol","entry","exit","size","pnl"],missing=required.filter(k=>idx[k]<0);
-    if(missing.length)return siteNotice("Could not identify these required columns: "+missing.join(", ")+".\n\nDetected columns: "+rows[0].join(", "));
+    if(missing.length)return siteNotice("Importing error.");
 
     let transactionType=headers.indexOf("transactiontype"),summaryCol=headers.indexOf("summary"),dateUtcCol=headers.indexOf("dateutc"),referenceCol=headers.indexOf("reference"),uidCol=headers.indexOf("uid"),statusCol=headers.indexOf("status");
     let rawDates=rows.slice(1).map(x=>x[idx.date]),order=detectOrder(rawDates),imported=[],skipped=0;
@@ -3180,7 +3181,7 @@ function importCSV(e){
     if(imported.length){let newest=imported.map(x=>x.date).sort().pop(),[y,m]=newest.split("-").map(Number);shownYear=y;shownMonth=m-1;tradePage=1}
     refresh();
     const tc=closedTrades(imported).length,ac=imported.filter(x=>x.kind==="adjustment").length;
-    siteNotice(tc+" trade"+(tc===1?"":"s")+" + "+ac+" adjustment"+(ac===1?"":"s")+" imported"+(skipped?` · ${skipped} cash-flow, open, duplicate or unreadable row${skipped===1?"":"s"} ignored`:"")+".");
+    siteNotice("Import successful.");
   }
 
   let r=new FileReader();
@@ -3188,13 +3189,14 @@ function importCSV(e){
     try{
       let bytes=new Uint8Array(r.result),isZip=bytes.length>4&&bytes[0]===0x50&&bytes[1]===0x4b;
       if(isZip){
-        if(typeof XLSX==="undefined")return siteNotice("This broker file is an Excel workbook. Spreadsheet support could not load; check your internet connection and try again.");
+        if(typeof XLSX==="undefined")return siteNotice("Importing error.");
         let wb=XLSX.read(r.result,{type:"array",cellDates:true}),ws=wb.Sheets[wb.SheetNames[0]],rows=XLSX.utils.sheet_to_json(ws,{header:1,defval:"",raw:true});processRows(rows);
       }else{
         let text=new TextDecoder("utf-8").decode(bytes);processRows(parseCSV(text));
       }
-    }catch(err){console.error(err);siteNotice("This trade file could not be read. Try exporting it as CSV or XLSX from your broker.")}
+    }catch(err){console.error(err);siteNotice("Importing error.")}
   };
+  r.onerror=()=>siteNotice("Importing error.");
   r.readAsArrayBuffer(f);e.target.value="";
 }
 
@@ -3218,17 +3220,7 @@ document.addEventListener("click",e=>{
   deselectDay();
 });
 
-// Restore the journal at the newest locally saved trade month.
-if(trades.length){
-  const newest=trades.map(t=>t.date).filter(Boolean).sort().pop();
-  if(newest){
-    const [y,m]=newest.split("-").map(Number);
-    if(Number.isFinite(y)&&Number.isFinite(m)){
-      shownYear=y;
-      shownMonth=m-1;
-    }
-  }
-}
+// On initial journal load, keep the visitor's current local month and year.
 
 refresh();
 </script>
