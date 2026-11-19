@@ -2308,14 +2308,13 @@ html[data-theme="dark"] #dashboard .home-privacy-links span{border-color:#686a73
 #dashboard .hero-behold + .editorial-headline{margin-top:14px}
 </style>
 <!-- Google Analytics 4: page views are sent explicitly for TWHYT's in-page navigation. -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FB3VG3DLZD"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FB3VG3DLZD"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){window.dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-FB3VG3DLZD', {send_page_view: false});
 </script>
-
 <!-- Minimal desktop-only notice for mobile and tablet screens -->
 <style id="twhyt-desktop-only-styles">
 #twhyt-desktop-only{display:none}
@@ -2328,11 +2327,10 @@ html[data-theme="dark"] #dashboard .home-privacy-links span{border-color:#686a73
 </style>
 </head>
 <body>
-<div id="twhyt-desktop-only" role="status" aria-label="Desktop-only notice">
- <h1>Desktop only</h1>
- <p>For now, please visit on a desktop or laptop.</p>
+<div aria-label="Desktop-only notice" id="twhyt-desktop-only" role="status">
+<h1>Desktop only</h1>
+<p>For now, please visit on a desktop or laptop.</p>
 </div>
-
 <header class="top"><div class="topin"><a class="brand" href="#" onclick="switchView('dashboard');return false"><div class="logo"><svg aria-hidden="true" height="34" viewbox="0 0 64 64" width="34"><rect fill="#28785e" height="64" rx="15" width="64"></rect><path d="M13 42 L25 31 L34 36 L50 19" fill="none" stroke="#fffdf7" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"></path><path d="M41 19 H50 V28" fill="none" stroke="#fffdf7" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"></path></svg></div><span>thiswebsitehelpsyoutrade<span class="brand-domain">.com</span></span></a><nav class="nav"><button class="active" data-view="dashboard">Home</button><button data-view="terminal">Market Terminal</button><button data-view="analytics">Trading Journal</button><button data-view="courses">Courses &amp; Tutelage</button></nav><div class="theme-header-slot"><button aria-label="Switch to dark mode" aria-pressed="false" class="theme-toggle" id="themeToggle" type="button"><svg aria-hidden="true" class="theme-moon" viewbox="0 0 24 24"><path d="M20.5 14.3A8.7 8.7 0 0 1 9.7 3.5a8.8 8.8 0 1 0 10.8 10.8Z"></path></svg><svg aria-hidden="true" class="theme-sun" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><span class="theme-label">Dark mode</span></button></div></div></header>
 <main>
 <section class="view active" id="dashboard">
@@ -2347,78 +2345,77 @@ html[data-theme="dark"] #dashboard .home-privacy-links span{border-color:#686a73
 <button class="editorial-action" onclick="switchView('analytics')"><span class="action-copy"><span class="action-eyebrow">A Very Helpful</span><strong>Trading Journal</strong><small>Keep track. Learn a thing or two.</small></span><span aria-hidden="true" class="action-arrow">↗</span></button>
 </div>
 </div><div aria-hidden="true" class="editorial-art earth-moon-scene">
-<svg viewBox="0 0 560 490" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rotating Earth and orbiting Moon, with their relative periods represented at a compressed timescale">
+<svg aria-label="Rotating Earth and orbiting Moon, with their relative periods represented at a compressed timescale" role="img" viewbox="0 0 560 490" xmlns="http://www.w3.org/2000/svg">
 <defs>
- <radialGradient id="earthOcean" cx=".31" cy=".26" r=".8"><stop stop-color="#6fc2d2"/><stop offset=".48" stop-color="#2585a3"/><stop offset="1" stop-color="#103e65"/></radialGradient>
- <linearGradient id="earthShade"><stop stop-color="#061c2b" stop-opacity=".48"/><stop offset=".25" stop-color="#102e46" stop-opacity=".04"/><stop offset=".64" stop-color="#102e46" stop-opacity=".06"/><stop offset="1" stop-color="#041624" stop-opacity=".76"/></linearGradient>
- <radialGradient id="earthLight" cx=".3" cy=".26" r=".75"><stop stop-color="#fff" stop-opacity=".2"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
- <radialGradient id="moonStone" cx=".25" cy=".23" r=".8"><stop stop-color="#f3f2e9"/><stop offset=".6" stop-color="#c5c8c6"/><stop offset="1" stop-color="#7b8791"/></radialGradient>
- <clipPath id="earthClip"><circle cx="280" cy="244" r="109"/></clipPath>
- <g id="earthContinents"><g fill="#75ad80" stroke="#9bc59b" stroke-width=".9" stroke-linejoin="round">
-<path d="M 15 35 L 29 22 51 19 70 27 78 42 67 51 59 66 47 71 41 91 28 87 25 70 15 61 8 47 Z"/>
-<path d="M 57 89 L 75 92 86 110 83 132 72 151 65 170 56 178 50 155 44 132 39 111 Z"/>
-<path d="M 103 32 L 117 19 132 24 136 37 128 44 116 43 Z"/>
-<path d="M 130 46 L 148 36 163 42 174 57 177 77 168 96 164 122 151 146 140 143 134 119 122 97 116 76 Z"/>
-<path d="M 152 26 L 177 17 196 23 215 15 241 23 260 18 286 30 303 45 293 60 275 64 263 79 244 76 236 91 218 83 207 68 188 69 174 56 163 44 Z"/>
-<path d="M 252 116 L 277 111 296 124 308 144 294 155 270 154 253 142 Z"/>
-<path d="M 314 37 L 325 30 335 38 333 48 322 51 Z"/>
-<path d="M 92 178 L 119 185 154 188 189 184 221 192 259 186 297 191 321 182 345 195 342 212 12 212 7 194 35 184 67 189 Z"/>
-</g><g fill="#b9d8b0" opacity=".45"><path d="M 27 40l18 -11 13 5 -14 15z M 145 60l16 -7 9 21 -15 14z M 191 34l37 -10 19 8 -25 10z M 262 125l22 -7 13 14 -24 7z"/></g></g>
- <g id="moonShape"><circle r="23" fill="url(#moonStone)"/><g fill="#89949a" opacity=".42"><circle cx="-7" cy="-6" r="5"/><circle cx="9" cy="5" r="7"/><circle cx="-6" cy="12" r="3.5"/><circle cx="12" cy="-12" r="3"/></g><circle r="23" fill="none" stroke="#e6e6df" stroke-opacity=".6" stroke-width="1"/></g>
+<radialgradient cx=".31" cy=".26" id="earthOcean" r=".8"><stop stop-color="#6fc2d2"></stop><stop offset=".48" stop-color="#2585a3"></stop><stop offset="1" stop-color="#103e65"></stop></radialgradient>
+<lineargradient id="earthShade"><stop stop-color="#061c2b" stop-opacity=".48"></stop><stop offset=".25" stop-color="#102e46" stop-opacity=".04"></stop><stop offset=".64" stop-color="#102e46" stop-opacity=".06"></stop><stop offset="1" stop-color="#041624" stop-opacity=".76"></stop></lineargradient>
+<radialgradient cx=".3" cy=".26" id="earthLight" r=".75"><stop stop-color="#fff" stop-opacity=".2"></stop><stop offset="1" stop-color="#fff" stop-opacity="0"></stop></radialgradient>
+<radialgradient cx=".25" cy=".23" id="moonStone" r=".8"><stop stop-color="#f3f2e9"></stop><stop offset=".6" stop-color="#c5c8c6"></stop><stop offset="1" stop-color="#7b8791"></stop></radialgradient>
+<clippath id="earthClip"><circle cx="280" cy="244" r="109"></circle></clippath>
+<g id="earthContinents"><g fill="#75ad80" stroke="#9bc59b" stroke-linejoin="round" stroke-width=".9">
+<path d="M 15 35 L 29 22 51 19 70 27 78 42 67 51 59 66 47 71 41 91 28 87 25 70 15 61 8 47 Z"></path>
+<path d="M 57 89 L 75 92 86 110 83 132 72 151 65 170 56 178 50 155 44 132 39 111 Z"></path>
+<path d="M 103 32 L 117 19 132 24 136 37 128 44 116 43 Z"></path>
+<path d="M 130 46 L 148 36 163 42 174 57 177 77 168 96 164 122 151 146 140 143 134 119 122 97 116 76 Z"></path>
+<path d="M 152 26 L 177 17 196 23 215 15 241 23 260 18 286 30 303 45 293 60 275 64 263 79 244 76 236 91 218 83 207 68 188 69 174 56 163 44 Z"></path>
+<path d="M 252 116 L 277 111 296 124 308 144 294 155 270 154 253 142 Z"></path>
+<path d="M 314 37 L 325 30 335 38 333 48 322 51 Z"></path>
+<path d="M 92 178 L 119 185 154 188 189 184 221 192 259 186 297 191 321 182 345 195 342 212 12 212 7 194 35 184 67 189 Z"></path>
+</g><g fill="#b9d8b0" opacity=".45"><path d="M 27 40l18 -11 13 5 -14 15z M 145 60l16 -7 9 21 -15 14z M 191 34l37 -10 19 8 -25 10z M 262 125l22 -7 13 14 -24 7z"></path></g></g>
+<g id="moonShape"><circle fill="url(#moonStone)" r="23"></circle><g fill="#89949a" opacity=".42"><circle cx="-7" cy="-6" r="5"></circle><circle cx="9" cy="5" r="7"></circle><circle cx="-6" cy="12" r="3.5"></circle><circle cx="12" cy="-12" r="3"></circle></g><circle fill="none" r="23" stroke="#e6e6df" stroke-opacity=".6" stroke-width="1"></circle></g>
 </defs>
 <!-- The orbital track is a visual projection, not a literal physical ring. -->
-<ellipse cx="280" cy="244" rx="198" ry="67" fill="none" stroke="#83a8a4" stroke-opacity=".23" stroke-width="1.2" transform="rotate(-14 280 244)"/>
-<g class="earth-moon-back"><use href="#moonShape"/></g>
-<circle cx="280" cy="244" r="118" fill="none" stroke="#73bed1" stroke-opacity=".12" stroke-width="8"/>
-<circle cx="280" cy="244" r="109" fill="url(#earthOcean)"/>
+<ellipse cx="280" cy="244" fill="none" rx="198" ry="67" stroke="#83a8a4" stroke-opacity=".23" stroke-width="1.2" transform="rotate(-14 280 244)"></ellipse>
+<g class="earth-moon-back"><use href="#moonShape"></use></g>
+<circle cx="280" cy="244" fill="none" r="118" stroke="#73bed1" stroke-opacity=".12" stroke-width="8"></circle>
+<circle cx="280" cy="244" fill="url(#earthOcean)" r="109"></circle>
 <g clip-path="url(#earthClip)">
-  <g class="earth-map" transform="translate(170 134)"><use href="#earthContinents"/><use href="#earthContinents" x="360"/></g>
-  <path d="M 181 213q48 -33 90 -4t102 1 M 174 266q56 28 112 3t101 -6 M 207 177q38 16 69 0t71 4" fill="none" stroke="#fff" stroke-opacity=".16" stroke-width="9" stroke-linecap="round"/>
-  <circle cx="280" cy="244" r="109" fill="url(#earthShade)"/>
-  <circle cx="280" cy="244" r="109" fill="url(#earthLight)"/>
+<g class="earth-map" transform="translate(170 134)"><use href="#earthContinents"></use><use href="#earthContinents" x="360"></use></g>
+<path d="M 181 213q48 -33 90 -4t102 1 M 174 266q56 28 112 3t101 -6 M 207 177q38 16 69 0t71 4" fill="none" stroke="#fff" stroke-linecap="round" stroke-opacity=".16" stroke-width="9"></path>
+<circle cx="280" cy="244" fill="url(#earthShade)" r="109"></circle>
+<circle cx="280" cy="244" fill="url(#earthLight)" r="109"></circle>
 </g>
-<circle cx="280" cy="244" r="109" fill="none" stroke="#c0e9e8" stroke-opacity=".48" stroke-width="1.5"/>
-<g class="earth-moon-front"><use href="#moonShape"/></g>
+<circle cx="280" cy="244" fill="none" r="109" stroke="#c0e9e8" stroke-opacity=".48" stroke-width="1.5"></circle>
+<g class="earth-moon-front"><use href="#moonShape"></use></g>
 </svg></div>
-<div class="editorial-bottom editorial-bottom-mouse"><button aria-label="Scroll down for more" class="editorial-scroll editorial-scroll-mouse" onclick="document.querySelector('.advice-entry').scrollIntoView({behavior:'smooth',block:'start'})"><span aria-hidden="true" class="scroll-mouse"></span><span class="scroll-label">SCROLL FOR MORE</span></button></div>
+
 </div>
 </div></section>
 <div class="home-content" id="homeContent">
-  <section class="home-about home-block home-reveal" aria-labelledby="homeAboutTitle">
-    
-    <div class="home-about-grid"><div class="home-about-copy"><span class="home-kicker">SOME CONTEXT</span><h2 id="homeAboutTitle">About this <em>website.</em></h2><p>This Website Helps You Trade is a collection of practical trading tools, a journal, market information and a little education. Nothing revolutionary. Just a few things that might make the process easier.</p><p>It's built around a simple idea: useful information should be straightforward to find, understand and use.</p></div><div class="home-about-art home-pendulums" aria-hidden="true"><div class="pendulum-frame"><div class="pendulum-rail"></div><div class="pendulum-arm"><i></i></div><div class="pendulum-arm"><i></i></div><div class="pendulum-arm"><i></i></div><div class="pendulum-arm"><i></i></div><div class="pendulum-arm"><i></i></div></div></div></div>
-    <div class="home-roadmap home-reveal"><div><span class="home-kicker">STILL IN THE WORKS</span><h3>Upcoming features<span class="home-period">.</span></h3><p>Some additions we're working towards. Coming soon.</p></div><div class="home-roadmap-items"><div><span class="home-roadmap-index">01</span><span>Expanded CSV import support for more trading brokers and platforms.</span></div><div><span class="home-roadmap-index">02</span><span>Live market data for the terminal.</span></div><div><span class="home-roadmap-index">03</span><span>A dedicated education page with free courses and more.</span></div></div></div>
-  </section>
-  <section class="home-newsletter home-block home-reveal" aria-labelledby="homeNewsletterTitle"><div class="home-newsletter-decoration" aria-hidden="true">✳</div><div class="home-newsletter-copy"><h2 id="homeNewsletterTitle">The occasional <em>email.</em></h2><p>Occasional, unscheduled emails with useful trading and investing insights.</p><form class="home-newsletter-form" id="homeNewsletterForm" onsubmit="return submitHomeNewsletter(event)"><label class="home-email-label" for="homeNewsletterEmail">Email address</label><div class="home-email-row"><input id="homeNewsletterEmail" type="email" autocomplete="email" placeholder="you@example.com" required><button type="submit">Sign up <span aria-hidden="true">↗</span></button></div><span class="home-form-status" id="homeNewsletterStatus" role="status" aria-live="polite"></span></form></div></section>
-  <section class="home-contact home-block home-reveal" aria-labelledby="homeContactTitle"><div class="home-contact-top"><div><span class="home-kicker">QUESTIONS, CORRECTIONS, IDEAS</span><h2 id="homeContactTitle">Contact us<span class="home-period">.</span><br><em>Suggest a feature.</em></h2></div><p></p></div><form class="home-contact-form" id="homeFeedbackForm" onsubmit="return submitHomeFeedback(event)"><div class="home-field"><label for="homeFeedbackName">Name <span>(optional)</span></label><input id="homeFeedbackName" placeholder="Your name" autocomplete="name"></div><div class="home-field"><label for="homeFeedbackTopic">What's this about?</label><select id="homeFeedbackTopic"><option>Suggest a feature</option><option>General enquiry</option><option>Report an issue</option><option>Something else</option></select></div><div class="home-field home-field-full"><label for="homeFeedbackMessage">Your message</label><textarea id="homeFeedbackMessage" placeholder="Tell us what's on your mind..." required rows="4"></textarea></div><div class="home-contact-actions"><button type="submit" class="home-action-button">Send message <span aria-hidden="true">↗</span></button><span id="homeFeedbackStatus" role="status" aria-live="polite"></span></div></form></section>
-  <section class="home-privacy home-block home-reveal" aria-labelledby="homePrivacyTitle"><div class="home-privacy-icon" aria-hidden="true">◎</div><div><h2 id="homePrivacyTitle">Privacy statement.</h2><p>Your Trading Journal is designed to store entries in your browser on this device. Browser data can be cleared, so export a backup if you want to keep your trades. We don't claim that the tools or educational content constitute financial advice.</p><p>This website uses Google Analytics to understand site visits. Google may process usage information according to its own privacy terms. Newsletter and contact submissions are not yet connected to a delivery service. This summary is not a substitute for a full privacy policy.</p><p>© 2026 This Website Helps You Trade. All rights reserved.</p></div></section>
+<section aria-labelledby="homeAboutTitle" class="home-about home-block home-reveal">
+<div class="home-about-grid"><div class="home-about-copy"><span class="home-kicker">SOME CONTEXT</span><h2 id="homeAboutTitle">About this <em>website.</em></h2><p>This Website Helps You Trade is a collection of practical trading tools, a journal, market information and a little education. Nothing revolutionary. Just a few things that might make the process easier.</p><p>It's built around a simple idea: useful information should be straightforward to find, understand and use.</p></div><div aria-hidden="true" class="home-about-art home-pendulums"><div class="pendulum-frame"><div class="pendulum-rail"></div><div class="pendulum-arm"><i></i></div><div class="pendulum-arm"><i></i></div><div class="pendulum-arm"><i></i></div><div class="pendulum-arm"><i></i></div><div class="pendulum-arm"><i></i></div></div></div></div>
+<div class="home-roadmap home-reveal"><div><span class="home-kicker">STILL IN THE WORKS</span><h3>Upcoming features<span class="home-period">.</span></h3><p>Some additions we're working towards. Coming soon.</p></div><div class="home-roadmap-items"><div><span class="home-roadmap-index">01</span><span>Expanded CSV import support for more trading brokers and platforms.</span></div><div><span class="home-roadmap-index">02</span><span>Live market data for the terminal.</span></div><div><span class="home-roadmap-index">03</span><span>A dedicated education page with free courses and more.</span></div></div></div>
+</section>
+
+
+<section aria-labelledby="homePrivacyTitle" class="home-privacy home-block home-reveal"><div aria-hidden="true" class="home-privacy-icon">◎</div><div><h2 id="homePrivacyTitle">Privacy statement.</h2><p>Your Trading Journal is designed to store entries in your browser on this device. Browser data can be cleared, so export a backup if you want to keep your trades. We don't claim that the tools or educational content constitute financial advice.</p><p>This website uses Google Analytics to understand site visits. Google may process usage information according to its own privacy terms. This summary is not a substitute for a full privacy policy.</p><p>© 2026 This Website Helps You Trade. All rights reserved.</p></div></section>
 </div>
-</div></section>
+</section>
 <section class="view terminal" id="terminal"><div class="termhead"><div class="termheadin"><div><div class="eyebrow">a very helpful</div><h1>Market Terminal</h1><p>Market session information and calendars in one place.</p></div><div class="clock"><strong id="localClock">--:--:--</strong><span id="localZone">Local time</span></div></div></div><div class="termwrap">
 <section class="termsec"><div class="sectitle"><h2>Global sessions</h2></div><div class="sessions" id="sessionCards"></div></section>
 <div class="terminal-data-notice" role="note"><strong>Sample data:</strong> Economic events and earnings calendar entries are placeholders, not live or verified market information. Please do not rely on them for trading decisions.</div>
-<div class="termgrid terminal-calendars"><section class="panel calendar-panel"><div class="panelbar"><h3>Economic events</h3><button type="button" class="calendar-filter-btn" aria-expanded="false" aria-controls="economicFilterPanel" onclick="toggleCalendarFilters('economicFilterPanel',this)">Filters <span aria-hidden="true">▾</span></button></div><div class="filters dropdown-filters calendar-filter-panel" id="economicFilterPanel" hidden>
+<div class="termgrid terminal-calendars"><section class="panel calendar-panel"><div class="panelbar"><h3>Economic events</h3><button aria-controls="economicFilterPanel" aria-expanded="false" class="calendar-filter-btn" onclick="toggleCalendarFilters('economicFilterPanel',this)" type="button">Filters <span aria-hidden="true">▾</span></button></div><div class="filters dropdown-filters calendar-filter-panel" hidden="" id="economicFilterPanel">
 <label>Country<select id="countrySelect"><option value="ALL">All countries</option><option value="US">US</option><option value="GB">UK</option><option value="EU">EU</option><option value="JP">JP</option><option value="AU">AU</option></select></label>
 <label>Impact<select id="impactSelect"><option value="ALL">All impact</option><option value="yellow">Low</option><option value="orange">Medium</option><option value="red">High</option></select></label></div>
-<div class="calendar-table-scroll"><div class="econ hdr"><span>Time</span><span class="calendar-icon-col"></span><span>CCY</span><span>Event</span><span>Actual</span><span>Forecast</span><span>Previous</span></div><div id="econRows"></div></div></section><section class="panel calendar-panel"><div class="panelbar"><h3>Earnings calendar</h3><button type="button" class="calendar-filter-btn" aria-expanded="false" aria-controls="earningsFilterPanel" onclick="toggleCalendarFilters('earningsFilterPanel',this)">Filters <span aria-hidden="true">▾</span></button></div><div class="filters dropdown-filters calendar-filter-panel" id="earningsFilterPanel" hidden><label>Session<select id="earningsSessionSelect" onchange="renderEarningsCalendar()"><option value="ALL">All sessions</option><option value="pre">Pre-market</option><option value="post">After-hours</option></select></label></div>
+<div class="calendar-table-scroll"><div class="econ hdr"><span>Time</span><span class="calendar-icon-col"></span><span>CCY</span><span>Event</span><span>Actual</span><span>Forecast</span><span>Previous</span></div><div id="econRows"></div></div></section><section class="panel calendar-panel"><div class="panelbar"><h3>Earnings calendar</h3><button aria-controls="earningsFilterPanel" aria-expanded="false" class="calendar-filter-btn" onclick="toggleCalendarFilters('earningsFilterPanel',this)" type="button">Filters <span aria-hidden="true">▾</span></button></div><div class="filters dropdown-filters calendar-filter-panel" hidden="" id="earningsFilterPanel"><label>Session<select id="earningsSessionSelect" onchange="renderEarningsCalendar()"><option value="ALL">All sessions</option><option value="pre">Pre-market</option><option value="post">After-hours</option></select></label></div>
 <div class="calendar-table-scroll"><div class="earn hdr"><span>Date</span><span class="calendar-icon-col"></span><span>Company</span><span>EPS est.</span><span>Mkt cap</span></div><div id="earnRows"></div></div></section></div>
 </div></section>
 <section class="view" id="analytics"><div class="ahead"><div class="aheadin"><div><div class="eyebrow">a very helpful</div><h1>Trading Journal</h1><p>Import trades via CSV or add them manually. Your stats update automatically.</p></div><div class="actions">
 <button class="btn" id="editDayBtn" onclick="openDayEditor()" style="background:#00a56a;border-color:#00a56a;color:#082a20">View day</button>
 <div class="journal-settings" id="journalSettings">
-  <button class="journal-settings-toggle" id="journalSettingsToggle" type="button" aria-label="Journal settings" title="Journal settings" aria-expanded="false" aria-controls="journalSettingsMenu" onclick="toggleJournalSettings()"><svg class="journal-cog-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="3"></circle>
-      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1.08-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06A2 2 0 1 1 7.04 4.3l.06.06A1.65 1.65 0 0 0 8.92 4a1.65 1.65 0 0 0 1-1.51V2.4a2 2 0 1 1 4 0v.09A1.65 1.65 0 0 0 15 4a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.12.61.66 1 1.28 1H21a2 2 0 1 1 0 4h-.32c-.62 0-1.16.39-1.28 1z"></path>
-    </svg></button>
-  <div class="journal-settings-menu" id="journalSettingsMenu" role="menu" aria-label="Journal data options">
-    <button type="button" role="menuitem" onclick="closeJournalSettings();document.getElementById('csvInput').click()">Import Data</button>
-    <button type="button" role="menuitem" onclick="closeJournalSettings();exportTradeData()">Export Data</button>
-    <div class="journal-settings-separator"></div>
-    <button class="journal-settings-danger" type="button" role="menuitem" onclick="closeJournalSettings();clearAllTradeData()">Clear Data</button>
-  </div>
+<button aria-controls="journalSettingsMenu" aria-expanded="false" aria-label="Journal settings" class="journal-settings-toggle" id="journalSettingsToggle" onclick="toggleJournalSettings()" title="Journal settings" type="button"><svg aria-hidden="true" class="journal-cog-icon" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+<circle cx="12" cy="12" r="3"></circle>
+<path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1.08-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06A2 2 0 1 1 7.04 4.3l.06.06A1.65 1.65 0 0 0 8.92 4a1.65 1.65 0 0 0 1-1.51V2.4a2 2 0 1 1 4 0v.09A1.65 1.65 0 0 0 15 4a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.12.61.66 1 1.28 1H21a2 2 0 1 1 0 4h-.32c-.62 0-1.16.39-1.28 1z"></path>
+</svg></button>
+<div aria-label="Journal data options" class="journal-settings-menu" id="journalSettingsMenu" role="menu">
+<button onclick="closeJournalSettings();document.getElementById('csvInput').click()" role="menuitem" type="button">Import Data</button>
+<button onclick="closeJournalSettings();exportTradeData()" role="menuitem" type="button">Export Data</button>
+<div class="journal-settings-separator"></div>
+<button class="journal-settings-danger" onclick="closeJournalSettings();clearAllTradeData()" role="menuitem" type="button">Clear Data</button>
 </div>
-<input accept=".csv,.xlsx,.xls" id="csvInput" onchange="importCSV(event)" type="file"/>
-</div></div></div><div class="awrap">
+</div>
+<input accept=".csv,.xlsx,.xls" id="csvInput" onchange="importCSV(event)" type="file">
+</input></div></div></div><div class="awrap">
 <div class="metrics"><div class="metric"><label>Profit Factor <span aria-label="About Profit Factor" class="metric-help" tabindex="0">?<span class="metric-tip">This ratio shows gross profits relative to gross losses. Above 1 means profits exceed losses.</span></span></label><strong id="mPF">—</strong></div><div class="metric"><label>P&amp;L Ratio <span aria-label="About P&amp;L Ratio" class="metric-help" tabindex="0">?<span class="metric-tip">This ratio compares your average winning trade with your average losing trade.</span></span></label><strong id="mRatio">—</strong></div><div class="metric"><label>Win Rate <span aria-label="About Win Rate" class="metric-help" tabindex="0">?<span class="metric-tip">Win Rate demonstrates the percentage of trades that finish in profit.</span></span></label><strong id="mWin">—</strong></div><div class="metric"><label>Trade Expectancy <span aria-label="About Trade Expectancy" class="metric-help" tabindex="0">?<span class="metric-tip">Trade Expectancy reveals your average profit or loss per trade.</span></span></label><strong id="mExp">—</strong></div></div>
 <div class="agrid"><div><div class="calhead"><h2 id="performanceTitle">September 2026</h2><div class="calendar-controls"><div aria-label="Journal period" class="scope-switch" role="tablist"><button aria-selected="true" class="active" id="monthScopeBtn" onclick="setJournalScope('month')" type="button">Monthly</button><button aria-selected="false" id="yearScopeBtn" onclick="setJournalScope('year')" type="button">Yearly</button></div><div class="mnav" id="monthNav"><button aria-label="Previous month" onclick="shiftMonth(-1)">←</button><div class="month-picker-wrap"><button aria-expanded="false" aria-haspopup="dialog" aria-label="Choose month and year" class="month-picker-trigger" id="monthPickerTrigger" onclick="toggleMonthPicker(event)" type="button"><span id="monthLabel"></span></button><div aria-label="Choose month and year" class="month-popover" id="monthPopover" role="dialog"><div class="month-picker-head"><button aria-label="Previous year" class="month-year-nav" onclick="changePickerYear(-1,event)" type="button">←</button><div class="month-year-control" id="monthYearControl"><button class="month-year-button" id="monthPickerYear" onclick="editPickerYear(event)" type="button"></button><input aria-label="Year" class="month-year-input" id="monthYearInput" max="2200" min="1900" onblur="commitPickerYear()" onkeydown="pickerYearKey(event)" type="number"/></div><button aria-label="Next year" class="month-year-nav" onclick="changePickerYear(1,event)" type="button">→</button></div><div class="month-grid" id="monthGrid"></div></div></div><button aria-label="Next month" onclick="shiftMonth(1)">→</button></div><div class="yearnav" id="yearNav"><button aria-label="Previous year" onclick="shiftYear(-1)">←</button><span id="yearLabel">2026</span><button aria-label="Next year" onclick="shiftYear(1)">→</button></div></div></div><div class="calscroll calendar-stage" id="calendarStage"><div class="cal" id="calGrid"></div><div class="year-grid" id="yearGrid"></div></div></div><aside class="side"><div class="mtotal"><label id="periodTotalLabel">Monthly total</label><strong id="monthPnl">$0</strong><span><b id="monthDays">0</b> <span id="periodDaysLabel">days traded</span></span></div><div class="selected" id="daySummary"><div class="date" id="selectedDate">Select a trading day</div><h3 id="selectedPnl">$0</h3><div class="slist"><div><span>Trades</span><b id="sTrades">—</b></div><div><span>Win rate</span><b id="sWin">—</b></div><div><span>Average winner</span><b id="sAvgWin">—</b></div><div><span>Average loser</span><b id="sAvgLoss">—</b></div></div>
 <div class="day-notes" id="dayNotesDisplay" style="display:none"><div class="day-notes-label">Notes</div><div class="day-notes-text" id="dayNotesText"></div></div>
@@ -2426,9 +2423,9 @@ html[data-theme="dark"] #dashboard .home-privacy-links span{border-color:#686a73
 <section class="log"><div class="loghead"><h2>Recent trades</h2><span id="tradeCountLabel"></span></div><div class="trade-table-shell"><table class="recent-trades-table"><colgroup><col style="width:16%"/><col style="width:15%"/><col style="width:11%"/><col style="width:13%"/><col style="width:13%"/><col style="width:13%"/><col style="width:19%"/></colgroup><thead><tr><th>Date</th><th>Symbol</th><th>Side</th><th>Entry</th><th>Exit</th><th>Size</th><th>Net P&amp;L</th></tr></thead><tbody id="tradeRows"></tbody></table></div></section>
 </div></section>
 <section aria-label="Courses and tutelage" class="view courses-page" id="courses">
-  <div class="course-coming-soon" aria-label="Coming soon">
-    <h1 class="course-coming-title"><span>Coming</span> <span>soon.</span></h1>
-  </div>
+<div aria-label="Coming soon" class="course-coming-soon">
+<h1 class="course-coming-title"><span>Coming</span> <span>soon.</span></h1>
+</div>
 </section>
 </main>
 <footer><div class="footerin"><b>thiswebsitehelpsyoutrade.com</b><span>Educational information only. Nothing on this site constitutes financial advice.</span></div></footer>
@@ -2446,8 +2443,6 @@ html[data-theme="dark"] #dashboard .home-privacy-links span{border-color:#686a73
 <div class="day-editor-foot"><span>Changes to trades are saved in this browser.</span><button onclick="closeModal()" type="button">Done</button></div>
 </div>
 </div>
-
-
 <script>
 document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>switchView(b.dataset.view));
 let pageTransitionBusy=false;
