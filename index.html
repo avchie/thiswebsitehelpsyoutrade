@@ -2168,6 +2168,47 @@ html[data-theme="dark"] #terminal .calendar-filter-panel select{color-scheme:dar
 
 /* Dashboard kicker: continuous decorative rule in place of text. */
 #dashboard .opening-kicker.editorial-kicker::before{width:230px;max-width:100%;flex:0 1 230px;}
+/* Clear but restrained market-calendar data disclaimer */
+.terminal-data-notice{margin:0 0 18px;padding:12px 15px;border:1px solid #60745d;border-left:3px solid #d5bb41;background:#192b28;color:#d7e2da;font-size:11px;line-height:1.6}
+.terminal-data-notice strong{color:#f0db8b}
+
+/* Homepage refinements */
+#dashboard .home-kinetic .kinetic-ring{width:64%;max-width:265px}
+#dashboard .home-kinetic .kinetic-ring-b{width:46%;max-width:193px}
+#dashboard .home-kinetic .kinetic-ring-c{width:79%;max-width:325px}
+#dashboard .home-kinetic .kinetic-center{width:74px;height:74px}
+
+#dashboard .home-kinetic{position:relative;isolation:isolate;display:grid;place-items:center;overflow:hidden;min-height:300px}
+#dashboard .kinetic-ring{position:absolute;border:1px solid #8ba996;border-radius:50%;width:75%;aspect-ratio:1;max-width:310px;animation:kineticTurn 15s linear infinite}
+#dashboard .kinetic-ring i{position:absolute;top:50%;left:-7px;width:14px;height:14px;border-radius:50%;background:#668c74;box-shadow:0 0 0 6px #668c7419}
+#dashboard .kinetic-ring-b{width:54%;max-width:225px;border-style:dashed;animation-duration:11s;animation-direction:reverse;transform:rotate(45deg)}
+#dashboard .kinetic-ring-b i{background:#a7bc8c;width:11px;height:11px;left:-5px}
+#dashboard .kinetic-ring-c{width:92%;max-width:380px;border-color:#aec4b3;animation-duration:23s}
+#dashboard .kinetic-ring-c i{background:#bdc9b1;width:9px;height:9px;left:-4px}
+#dashboard .kinetic-center{width:86px;height:86px;border-radius:22px;transform:rotate(45deg);background:#d9e9db;box-shadow:0 14px 35px #193a2920;display:flex;align-items:center;justify-content:center;gap:6px}
+#dashboard .kinetic-center span{height:8px;width:8px;border-radius:50%;background:#567f68;animation:kineticPulse 1.8s ease-in-out infinite alternate}
+#dashboard .kinetic-center span:nth-child(2){animation-delay:.35s}#dashboard .kinetic-center span:nth-child(3){animation-delay:.7s}
+@keyframes kineticTurn{to{transform:rotate(360deg)}}@keyframes kineticPulse{to{opacity:.3;transform:scale(.6)}}
+#dashboard .home-email-label{display:block;font-size:12px;margin-bottom:10px;font-weight:650}
+#dashboard .home-email-row{display:flex;max-width:540px;border:1px solid #a1bfa9;border-radius:12px;overflow:hidden;background:#f9fbf8}
+#dashboard .home-email-row input{flex:1;min-width:0;padding:15px;border:0;outline:0;background:transparent;color:#263b35;font:inherit}
+#dashboard .home-email-row button{border:0;background:#c8ddcc;color:#263b35;padding:0 20px;font:inherit;font-weight:750;cursor:pointer}
+#dashboard .home-email-row button:hover{background:#d9e9db}
+#dashboard .home-form-status{display:block;margin-top:12px;font-size:12px;color:#e5f0e6}
+@media(prefers-reduced-motion:reduce){#dashboard .kinetic-ring,#dashboard .kinetic-center span{animation:none}}
+
+/* About section: understated five-pendulum kinetic sculpture */
+#dashboard .home-pendulums{height:300px;min-height:300px;display:grid;place-items:center;overflow:hidden}
+#dashboard .pendulum-frame{position:relative;width:min(100%,350px);height:245px;display:flex;justify-content:center;gap:22px;padding-top:30px}
+#dashboard .pendulum-rail{position:absolute;top:22px;left:10%;right:10%;height:3px;border-radius:3px;background:#789987;box-shadow:0 2px 8px #10282a12}
+#dashboard .pendulum-arm{position:relative;width:27px;height:180px;transform-origin:50% 0;animation:pendulumSwing 3.8s ease-in-out infinite alternate}
+#dashboard .pendulum-arm:before{content:"";position:absolute;top:0;left:50%;width:1px;height:143px;background:#9ab3a3;transform:translateX(-50%)}
+#dashboard .pendulum-arm:after{content:"";position:absolute;top:-10px;left:50%;width:7px;height:7px;border-radius:50%;background:#698d78;transform:translateX(-50%)}
+#dashboard .pendulum-arm i{position:absolute;top:140px;left:50%;width:27px;height:27px;border-radius:50%;transform:translateX(-50%);background:radial-gradient(circle at 32% 28%,#c6dfc8,#6b987f 68%,#416c58);box-shadow:0 8px 18px #193a2922}
+#dashboard .pendulum-arm:nth-child(3){animation-delay:-.35s}#dashboard .pendulum-arm:nth-child(4){animation-delay:-.7s}#dashboard .pendulum-arm:nth-child(5){animation-delay:-1.05s}#dashboard .pendulum-arm:nth-child(6){animation-delay:-1.4s}
+@keyframes pendulumSwing{from{transform:rotate(-18deg)}to{transform:rotate(18deg)}}
+html[data-theme="dark"] #dashboard .pendulum-rail{background:#789987}
+@media(prefers-reduced-motion:reduce){#dashboard .pendulum-arm{animation:none;transform:rotate(0)}}
 </style>
 <link href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2215%22%20fill%3D%22%2328785e%22%2F%3E%3Cpath%20d%3D%22M13%2042%20L25%2031%20L34%2036%20L50%2019%20M41%2019%20H50%20V28%22%20fill%3D%22none%22%20stroke%3D%22%23fffdf7%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E" rel="icon" type="image/svg+xml"/>
 <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
@@ -2253,9 +2294,15 @@ html[data-theme="dark"] #dashboard .home-privacy-icon{color:#a7a9b1}
 html[data-theme="dark"] #dashboard .home-privacy-links span{border-color:#686a73}
 
 @media(prefers-reduced-motion:reduce){#dashboard .home-reveal{opacity:1;transform:none;filter:none;transition:none}#dashboard .home-art-core{animation:none}}
+/* Clear but restrained market-calendar data disclaimer */
+.terminal-data-notice{margin:0 0 18px;padding:12px 15px;border:1px solid #60745d;border-left:3px solid #d5bb41;background:#192b28;color:#d7e2da;font-size:11px;line-height:1.6}
+.terminal-data-notice strong{color:#f0db8b}
 </style>
 <style>/* Let the headline qualifier arrive a beat after the main title. */
 #dashboard .editorial-headline .headline-line.headline-qualifier > span { animation-delay: 1.20s; }
+/* Clear but restrained market-calendar data disclaimer */
+.terminal-data-notice{margin:0 0 18px;padding:12px 15px;border:1px solid #60745d;border-left:3px solid #d5bb41;background:#192b28;color:#d7e2da;font-size:11px;line-height:1.6}
+.terminal-data-notice strong{color:#f0db8b}
 </style>
 <!-- Google Analytics 4: page views are sent explicitly for TWHYT's in-page navigation. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FB3VG3DLZD"></script>
@@ -2275,7 +2322,7 @@ html[data-theme="dark"] #dashboard .home-privacy-links span{border-color:#686a73
 <div class="wrap editorial-inner">
 <div class="editorial-main"><div class="editorial-copy">
 <div class="opening-kicker editorial-kicker" aria-hidden="true"></div>
-<h1 class="editorial-headline"><span class="headline-line"><span>This website</span></span><span class="headline-line"><span>helps you trade<span class="headline-ellipsis" aria-label="..." role="text"><span>.</span><span>.</span><span>.</span></span></span></span><span class="headline-line headline-qualifier"><span><em>(Mostly)</em></span></span></h1>
+<h1 class="editorial-headline"><span class="headline-line"><span>This website</span></span><span class="headline-line"><span>helps you trade<span class="headline-ellipsis" aria-label="..." role="text"><span>.</span><span>.</span><span>.</span></span></span></span><span class="headline-line headline-qualifier"><span><em>slightly*</em></span></span></h1>
 <p class="editorial-description">A few useful tools for the markets. Nothing more complicated than it needs to be.</p>
 <div aria-label="Explore the tools" class="editorial-actions">
 <button class="editorial-action" onclick="switchView('terminal')"><span class="action-copy"><span class="action-eyebrow">A Very Helpful</span><strong>Market Terminal</strong><small>A look at what the markets are up to.</small></span><span aria-hidden="true" class="action-arrow">↗</span></button>
@@ -2320,17 +2367,18 @@ html[data-theme="dark"] #dashboard .home-privacy-links span{border-color:#686a73
 </div></section>
 <div class="home-content" id="homeContent">
   <section class="home-about home-block home-reveal" aria-labelledby="homeAboutTitle">
-    <div class="home-section-number">01 / THE IDEA</div>
-    <div class="home-about-grid"><div class="home-about-copy"><span class="home-kicker">A LITTLE CONTEXT</span><h2 id="homeAboutTitle">About this <em>website.</em></h2><p>This Website Helps You Trade is a collection of practical trading tools, a journal, market information and a little education. Nothing revolutionary. Just a few things that might make the process easier.</p><p>It's built around a simple idea: useful information should be straightforward to find, understand and use.</p></div><div class="home-about-art" aria-hidden="true"><div class="home-orbit orbit-one"></div><div class="home-orbit orbit-two"></div><div class="home-art-core"><span>LESS NOISE.</span><strong>MORE<br>USEFUL.</strong><i>↗</i></div><span class="home-art-dot dot-one"></span><span class="home-art-dot dot-two"></span></div></div>
-    <div class="home-roadmap home-reveal"><div><span class="home-kicker">STILL IN THE WORKS</span><h3>Upcoming features<span class="home-period">.</span></h3><p>Some additions we're working towards. No dramatic countdowns.</p></div><div class="home-roadmap-items"><div><span class="home-roadmap-index">01</span><span>More regularly updated market calendars</span><span class="home-roadmap-tag">Planned</span></div><div><span class="home-roadmap-index">02</span><span>More journal insights and refinements</span><span class="home-roadmap-tag">Planned</span></div><div><span class="home-roadmap-index">03</span><span>Additional guides and resources</span><span class="home-roadmap-tag">Planned</span></div></div></div>
+    
+    <div class="home-about-grid"><div class="home-about-copy"><span class="home-kicker">SOME CONTEXT</span><h2 id="homeAboutTitle">About this <em>website.</em></h2><p>This Website Helps You Trade is a collection of practical trading tools, a journal, market information and a little education. Nothing revolutionary. Just a few things that might make the process easier.</p><p>It's built around a simple idea: useful information should be straightforward to find, understand and use.</p></div><div class="home-about-art home-pendulums" aria-hidden="true"><div class="pendulum-frame"><div class="pendulum-rail"></div><div class="pendulum-arm"><i></i></div><div class="pendulum-arm"><i></i></div><div class="pendulum-arm"><i></i></div><div class="pendulum-arm"><i></i></div><div class="pendulum-arm"><i></i></div></div></div></div>
+    <div class="home-roadmap home-reveal"><div><span class="home-kicker">STILL IN THE WORKS</span><h3>Upcoming features<span class="home-period">.</span></h3><p>Some additions we're working towards. Coming soon.</p></div><div class="home-roadmap-items"><div><span class="home-roadmap-index">01</span><span>Expanded CSV import support for more trading brokers and platforms.</span></div><div><span class="home-roadmap-index">02</span><span>Live market data for the terminal.</span></div><div><span class="home-roadmap-index">03</span><span>A dedicated education page with free courses and more.</span></div></div></div>
   </section>
-  <section class="home-newsletter home-block home-reveal" aria-labelledby="homeNewsletterTitle"><div class="home-newsletter-decoration" aria-hidden="true">✳</div><div class="home-newsletter-copy"><span class="home-kicker">02 / STAY IN THE LOOP</span><h2 id="homeNewsletterTitle">The occasional <em>email.</em></h2><p>New tools, site updates and useful trading-related things. Sent occasionally, not constantly.</p><div class="home-newsletter-form"><span class="home-soon-pill">Newsletter signups coming soon</span><p class="home-small-note">We're setting this up before accepting email addresses.</p></div></div><div class="home-newsletter-stamp" aria-hidden="true"><span>NOT</span><span>ANOTHER</span><span>DAILY</span><span>EMAIL.</span></div></section>
-  <section class="home-contact home-block home-reveal" aria-labelledby="homeContactTitle"><div class="home-section-number">03 / SAY HELLO</div><div class="home-contact-top"><div><span class="home-kicker">QUESTIONS, CORRECTIONS, IDEAS</span><h2 id="homeContactTitle">Contact us<span class="home-period">.</span><br><em>Suggest a feature.</em></h2></div><p>Found something that could be better? Have a feature in mind? We'd like to hear it.</p></div><form class="home-contact-form" id="homeFeedbackForm" onsubmit="return copyHomeFeedback(event)"><div class="home-field"><label for="homeFeedbackName">Name <span>(optional)</span></label><input id="homeFeedbackName" placeholder="Your name" autocomplete="name"></div><div class="home-field"><label for="homeFeedbackTopic">What's this about?</label><select id="homeFeedbackTopic"><option>Suggest a feature</option><option>General enquiry</option><option>Report an issue</option><option>Something else</option></select></div><div class="home-field home-field-full"><label for="homeFeedbackMessage">Your message</label><textarea id="homeFeedbackMessage" placeholder="Tell us what's on your mind..." required rows="4"></textarea></div><div class="home-contact-actions"><button type="submit" class="home-action-button">Copy message <span aria-hidden="true">↗</span></button><span id="homeFeedbackStatus" role="status" aria-live="polite">Copies your message; direct submissions aren't available yet.</span></div></form></section>
-  <section class="home-privacy home-block home-reveal" aria-labelledby="homePrivacyTitle"><div class="home-privacy-icon" aria-hidden="true">◎</div><div><span class="home-kicker">04 / THE IMPORTANT BITS</span><h2 id="homePrivacyTitle">Privacy &amp; transparency.</h2><p>Your Trading Journal is designed to store entries in your browser on this device. Browser data can be cleared, so export a backup if you want to keep your trades. We don't claim that the tools or educational content constitute financial advice.</p><p>This website may use third-party market data and, if enabled later, analytics or newsletter services. Their data practices will be explained before those services are introduced. This summary isn't a substitute for a full privacy policy.</p><div class="home-privacy-links"><span>Local journal storage</span><span>Educational use only</span><span>No guaranteed results</span></div></div></section>
+  <section class="home-newsletter home-block home-reveal" aria-labelledby="homeNewsletterTitle"><div class="home-newsletter-decoration" aria-hidden="true">✳</div><div class="home-newsletter-copy"><h2 id="homeNewsletterTitle">The occasional <em>email.</em></h2><p>Occasional, unscheduled emails with useful trading and investing insights.</p><form class="home-newsletter-form" id="homeNewsletterForm" onsubmit="return submitHomeNewsletter(event)"><label class="home-email-label" for="homeNewsletterEmail">Email address</label><div class="home-email-row"><input id="homeNewsletterEmail" type="email" autocomplete="email" placeholder="you@example.com" required><button type="submit">Sign up <span aria-hidden="true">↗</span></button></div><span class="home-form-status" id="homeNewsletterStatus" role="status" aria-live="polite"></span></form></div></section>
+  <section class="home-contact home-block home-reveal" aria-labelledby="homeContactTitle"><div class="home-contact-top"><div><span class="home-kicker">QUESTIONS, CORRECTIONS, IDEAS</span><h2 id="homeContactTitle">Contact us<span class="home-period">.</span><br><em>Suggest a feature.</em></h2></div><p></p></div><form class="home-contact-form" id="homeFeedbackForm" onsubmit="return submitHomeFeedback(event)"><div class="home-field"><label for="homeFeedbackName">Name <span>(optional)</span></label><input id="homeFeedbackName" placeholder="Your name" autocomplete="name"></div><div class="home-field"><label for="homeFeedbackTopic">What's this about?</label><select id="homeFeedbackTopic"><option>Suggest a feature</option><option>General enquiry</option><option>Report an issue</option><option>Something else</option></select></div><div class="home-field home-field-full"><label for="homeFeedbackMessage">Your message</label><textarea id="homeFeedbackMessage" placeholder="Tell us what's on your mind..." required rows="4"></textarea></div><div class="home-contact-actions"><button type="submit" class="home-action-button">Send message <span aria-hidden="true">↗</span></button><span id="homeFeedbackStatus" role="status" aria-live="polite"></span></div></form></section>
+  <section class="home-privacy home-block home-reveal" aria-labelledby="homePrivacyTitle"><div class="home-privacy-icon" aria-hidden="true">◎</div><div><h2 id="homePrivacyTitle">Privacy statement.</h2><p>Your Trading Journal is designed to store entries in your browser on this device. Browser data can be cleared, so export a backup if you want to keep your trades. We don't claim that the tools or educational content constitute financial advice.</p><p>This website uses Google Analytics to understand site visits. Google may process usage information according to its own privacy terms. Newsletter and contact submissions are not yet connected to a delivery service. This summary is not a substitute for a full privacy policy.</p><p>© 2026 This Website Helps You Trade. All rights reserved.</p></div></section>
 </div>
 </div></section>
-<section class="view terminal" id="terminal"><div class="termhead"><div class="termheadin"><div><div class="eyebrow">a very helpful</div><h1>Market Terminal</h1><p>Live, accurate market data and session information in one place.</p></div><div class="clock"><strong id="localClock">--:--:--</strong><span id="localZone">Local time</span></div></div></div><div class="termwrap">
+<section class="view terminal" id="terminal"><div class="termhead"><div class="termheadin"><div><div class="eyebrow">a very helpful</div><h1>Market Terminal</h1><p>Market session information and calendars in one place.</p></div><div class="clock"><strong id="localClock">--:--:--</strong><span id="localZone">Local time</span></div></div></div><div class="termwrap">
 <section class="termsec"><div class="sectitle"><h2>Global sessions</h2></div><div class="sessions" id="sessionCards"></div></section>
+<div class="terminal-data-notice" role="note"><strong>Sample data:</strong> Economic events and earnings calendar entries are placeholders, not live or verified market information. Please do not rely on them for trading decisions.</div>
 <div class="termgrid terminal-calendars"><section class="panel calendar-panel"><div class="panelbar"><h3>Economic events</h3><button type="button" class="calendar-filter-btn" aria-expanded="false" aria-controls="economicFilterPanel" onclick="toggleCalendarFilters('economicFilterPanel',this)">Filters <span aria-hidden="true">▾</span></button></div><div class="filters dropdown-filters calendar-filter-panel" id="economicFilterPanel" hidden>
 <label>Country<select id="countrySelect"><option value="ALL">All countries</option><option value="US">US</option><option value="GB">UK</option><option value="EU">EU</option><option value="JP">JP</option><option value="AU">AU</option></select></label>
 <label>Impact<select id="impactSelect"><option value="ALL">All impact</option><option value="yellow">Low</option><option value="orange">Medium</option><option value="red">High</option></select></label></div>
@@ -2401,7 +2449,7 @@ function applyView(id,animated=false){
 const twhytAnalyticsTitles={dashboard:'Home',terminal:'Market Terminal',analytics:'Trading Journal',courses:'Courses & Tutelage'};
 function trackTwhytPageView(id){
   if(typeof gtag!=='function'||!Object.prototype.hasOwnProperty.call(twhytAnalyticsTitles,id))return;
-  const safePath=window.location.pathname+(id==='dashboard'?'':'?tab='+encodeURIComponent(id));
+  const safePath=window.location.pathname+(id==='dashboard'?'':'?tab='+encodeURIComponent(twhytTabSlug[id]));
   gtag('event','page_view',{
     page_title:twhytAnalyticsTitles[id]+' | This Website Helps You Trade',
     page_location:window.location.origin+safePath,
@@ -2409,14 +2457,16 @@ function trackTwhytPageView(id){
   });
 }
 const bookmarkableViews=new Set(['dashboard','terminal','analytics','courses']);
+const twhytTabSlug={terminal:'terminal',analytics:'journal',courses:'education'};
+const twhytSlugView={terminal:'terminal',journal:'analytics',education:'courses',analytics:'analytics',courses:'courses'};
 function bookmarkedView(){
   const requested=new URL(window.location.href).searchParams.get('tab');
-  return bookmarkableViews.has(requested)?requested:'dashboard';
+  return twhytSlugView[requested]||'dashboard';
 }
 function updateBookmarkUrl(id){
   const url=new URL(window.location.href);
   if(id==='dashboard')url.searchParams.delete('tab');
-  else url.searchParams.set('tab',id);
+  else url.searchParams.set('tab',twhytTabSlug[id]);
   history.pushState({tab:id},'',url.pathname+url.search+url.hash);
 }
 function switchView(id){
@@ -3482,7 +3532,7 @@ document.getElementById('courseEnquiryForm').addEventListener('submit',async fun
 })();
 </script>
 <script>
-function copyHomeFeedback(event){event.preventDefault();const name=document.getElementById('homeFeedbackName').value.trim();const topic=document.getElementById('homeFeedbackTopic').value;const message=document.getElementById('homeFeedbackMessage').value.trim();if(!message)return false;const text=['TWHYT — '+topic,name?'From: '+name:'',message].filter(Boolean).join('\n\n');const status=document.getElementById('homeFeedbackStatus');if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(()=>{status.textContent='Message copied. Contact submissions will be available soon.'}).catch(()=>{status.textContent='Could not copy automatically. Please select and copy your message.'})}else{const t=document.createElement('textarea');t.value=text;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();try{document.execCommand('copy');status.textContent='Message copied. Contact submissions will be available soon.'}catch(e){status.textContent='Please copy your message manually.'}t.remove()}return false}
+function submitHomeFeedback(event){event.preventDefault();const status=document.getElementById('homeFeedbackStatus');status.textContent='Message sending is not available yet. Your message has not been submitted.';return false}
 (function(){
   const setup=()=>{
     const dashboard=document.getElementById('dashboard');
@@ -3518,4 +3568,5 @@ function copyHomeFeedback(event){event.preventDefault();const name=document.getE
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setup);
   else setup();
 })();
+function submitHomeNewsletter(event){event.preventDefault();document.getElementById('homeNewsletterStatus').textContent='Email signups are not active yet. Your address has not been submitted.';return false}
 </script></body></html>
