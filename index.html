@@ -2303,6 +2303,9 @@ html[data-theme="dark"] #dashboard .home-privacy-links span{border-color:#686a73
 /* Clear but restrained market-calendar data disclaimer */
 .terminal-data-notice{margin:0 0 18px;padding:12px 15px;border:1px solid #60745d;border-left:3px solid #d5bb41;background:#192b28;color:#d7e2da;font-size:11px;line-height:1.6}
 .terminal-data-notice strong{color:#f0db8b}
+/* Minimal editorial preheading, with the title's original reveal preserved. */
+#dashboard .hero-behold{font-size:11px;font-weight:700;letter-spacing:.17em;line-height:1.4;color:var(--hero-accent);animation:editorialFade .8s ease .22s both}
+#dashboard .hero-behold + .editorial-headline{margin-top:14px}
 </style>
 <!-- Google Analytics 4: page views are sent explicitly for TWHYT's in-page navigation. -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FB3VG3DLZD"></script>
@@ -2337,8 +2340,7 @@ html[data-theme="dark"] #dashboard .home-privacy-links span{border-color:#686a73
 <div aria-hidden="true" class="hero-atmosphere"><span class="atmo-ring ring-one"></span><span class="atmo-ring ring-two"></span><span class="atmo-glow"></span></div>
 <div class="wrap editorial-inner">
 <div class="editorial-main"><div class="editorial-copy">
-<div class="opening-kicker editorial-kicker" aria-hidden="true"></div>
-<h1 class="editorial-headline"><span class="headline-line"><span>This website</span></span><span class="headline-line"><span>helps you trade<span class="headline-ellipsis" aria-label="..." role="text"><span>.</span><span>.</span><span>.</span></span></span></span><span class="headline-line headline-qualifier"><span><em>slightly*</em></span></span></h1>
+<h1 class="editorial-headline"><span class="headline-line"><span>This website</span></span><span class="headline-line"><span>helps you trade.</span></span></h1>
 <p class="editorial-description">A few useful tools for the markets. Nothing more complicated than it needs to be.</p>
 <div aria-label="Explore the tools" class="editorial-actions">
 <button class="editorial-action" onclick="switchView('terminal')"><span class="action-copy"><span class="action-eyebrow">A Very Helpful</span><strong>Market Terminal</strong><small>A look at what the markets are up to.</small></span><span aria-hidden="true" class="action-arrow">↗</span></button>
