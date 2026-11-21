@@ -5,8 +5,16 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="#10282a" name="theme-color"/>
-<title>This Website Helps You Trade | Trading Tools &amp; Education</title>
-<meta content="Trading tools, market context, technical analysis lessons and a trading journal. A website that does what it says on the tin." name="description"/>
+<title>This Website Helps You Trade</title>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="This Website Helps You Trade."/>
+<meta property="og:description" content="This Website Helps You Trade."/>
+<meta property="og:url" content="https://thiswebsitehelpsyoutrade.com/"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="This Website Helps You Trade."/>
+<meta name="twitter:description" content="This Website Helps You Trade."/>
+
+<meta name="description" content="This Website Helps You Trade."/>
 <script>try{document.documentElement.dataset.theme=localStorage.getItem('twhyt-theme')==='dark'?'dark':'light'}catch(e){document.documentElement.dataset.theme='light'}</script>
 <style>
 :root{--ink:#10282a;--ink2:#17383a;--paper:#f3f0e8;--white:#fbfaf6;--muted:#667274;--rule:#aeb7b2;--rule2:#d0d5d1;--green:#00a56a;--green2:#78d7a2;--red:#b84646;--amber:#d28d22;--yellow:#d5bb41}
@@ -798,7 +806,7 @@ footer{background:#243c36}
 .day-trade-actions{display:flex;gap:6px}.day-trade-actions button{border:1px solid #d4e2d7;border-radius:7px;background:white;padding:8px 10px;font-size:10px;font-weight:700;color:#35684d;transition:background .2s,border-color .2s}.day-trade-actions button:hover{background:#edf5ef}.day-trade-actions button.remove{color:#aa4d51}.day-trade-actions button.remove:hover{background:#fff1f1;border-color:#eccbcb}
 .day-editor-empty{padding:48px 18px;text-align:center;border:1px dashed #cfded2;border-radius:12px;color:#78897e;font-size:12px}.day-editor-empty strong{display:block;font-size:15px;color:#354e40}.day-editor-empty p{margin:8px 0 0}
 #tradeModal .daily-notes-field{border:0;padding:0;margin:0;background:transparent}#tradeModal .daily-notes-field textarea{width:100%;min-height:210px;resize:vertical;line-height:1.65}
-#tradeModal .day-editor-foot{flex:none;display:flex;justify-content:space-between;align-items:center;padding:12px 25px;background:#f5f9f5;border-top:1px solid #dce8de;gap:15px}.day-editor-foot span{font-size:10px;color:#7b8a80}.day-editor-foot button{border:1px solid #cbdcd0;background:white;border-radius:8px;padding:9px 17px;font-size:11px;font-weight:700;color:#31533e;cursor:pointer}
+#tradeModal .day-editor-foot{flex:none;display:flex;justify-content:flex-end;align-items:center;padding:12px 25px;background:#f5f9f5;border-top:1px solid #dce8de;gap:15px}.day-editor-foot span{font-size:10px;color:#7b8a80}.day-editor-foot button{border:1px solid #cbdcd0;background:white;border-radius:8px;padding:9px 17px;font-size:11px;font-weight:700;color:#31533e;cursor:pointer}
 @media(max-width:650px){#tradeModal .day-editor{height:calc(100dvh - 20px);width:calc(100vw - 16px)}.day-editor-overview>div{padding:12px}.day-editor-overview strong{font-size:18px}.day-editor-tabs{gap:14px;padding:0 15px}#tradeModal .day-editor-content{padding:18px 14px}.day-trade-row{grid-template-columns:1fr auto;gap:10px}.day-trade-actions{grid-column:1/-1}.day-editor-sectionhead{align-items:flex-start;flex-wrap:wrap}#tradeModal .day-editor-foot{padding:12px 15px}}
 @media(prefers-reduced-motion:reduce){.day-editor-panel{animation:none}}
 
@@ -2209,6 +2217,52 @@ html[data-theme="dark"] #terminal .calendar-filter-panel select{color-scheme:dar
 @keyframes pendulumSwing{from{transform:rotate(-18deg)}to{transform:rotate(18deg)}}
 html[data-theme="dark"] #dashboard .pendulum-rail{background:#789987}
 @media(prefers-reduced-motion:reduce){#dashboard .pendulum-arm{animation:none;transform:rotate(0)}}
+
+/* Home: title-only layout */
+#dashboard .opening-hero{min-height:calc(100svh - 76px);border-bottom:0}
+#dashboard .editorial-inner{min-height:calc(100svh - 76px);display:flex;align-items:center}
+#dashboard .editorial-main{display:block!important;width:100%;max-width:none}
+#dashboard .editorial-copy{width:100%;max-width:none}
+#dashboard .editorial-headline{font-size:clamp(70px,6.35vw,108px)!important;max-width:none}
+body:has(#dashboard.active) footer{display:none}
+@media(max-width:1000px){#dashboard .editorial-headline{font-size:clamp(48px,6.4vw,78px)!important}}
+@media(max-width:700px){#dashboard .opening-hero,#dashboard .editorial-inner{min-height:calc(100svh - 110px)}#dashboard .editorial-headline{font-size:clamp(34px,7.3vw,55px)!important}}
+
+/* Homepage: restrained navigation links and a slightly lower title group. */
+#dashboard .editorial-copy{transform:translateY(32px)}
+#dashboard .home-quicklinks{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:38px}
+#dashboard .home-quicklinks button{appearance:none;background:transparent;color:inherit;border:1px solid currentColor;padding:13px 17px;font:600 11px/1.3 Arial,Helvetica,sans-serif;letter-spacing:.045em;display:inline-flex;align-items:center;justify-content:space-between;gap:30px;opacity:.76;transition:opacity .2s ease,background .2s ease,border-color .2s ease}
+#dashboard .home-quicklinks button:hover,#dashboard .home-quicklinks button:focus-visible{opacity:1;background:rgba(120,215,162,.08);border-color:var(--green)}
+#dashboard .home-quicklinks button span{font-size:15px;font-weight:400;color:var(--green2)}
+@media(max-width:700px){#dashboard .editorial-copy{transform:translateY(18px)}#dashboard .home-quicklinks{margin-top:27px;gap:9px}#dashboard .home-quicklinks button{padding:11px 12px;gap:13px;font-size:10px}}
+
+/* Home hero refinements: slightly lower headline, rounded animated links. */
+#dashboard .editorial-copy{transform:translateY(53px)}
+/* Refined homepage navigation: quiet pill buttons, understated hover. */
+#dashboard .home-quicklinks{display:flex;gap:12px;margin-top:40px;flex-wrap:wrap}
+#dashboard .home-quicklinks button{
+  appearance:none;display:inline-flex;align-items:center;justify-content:center;
+  gap:20px;min-height:49px;padding:13px 22px;border-radius:999px;
+  border:1px solid rgba(120,215,162,.32);background:rgba(255,255,255,.035);
+  color:inherit;font:500 12px/1.3 Arial,Helvetica,sans-serif;letter-spacing:.015em;
+  opacity:0;transform:translateY(7px);
+  animation:homeButtonArrive .55s ease-out .55s forwards;
+  transition:background-color .2s ease,border-color .2s ease,color .2s ease;
+}
+#dashboard .home-quicklinks button:nth-child(2){animation-delay:.66s}
+#dashboard .home-quicklinks button:hover,#dashboard .home-quicklinks button:focus-visible{
+  background:rgba(120,215,162,.085);border-color:rgba(120,215,162,.65);
+  opacity:1;box-shadow:none;translate:none;
+}
+#dashboard .home-quicklinks button span{font-size:13px;font-weight:400;color:var(--green2);opacity:.8}
+@keyframes homeButtonArrive{to{opacity:1;transform:translateY(0)}}
+@media(max-width:700px){#dashboard .home-quicklinks{margin-top:30px;gap:10px}#dashboard .home-quicklinks button{min-height:45px;padding:11px 17px;font-size:11px;gap:12px}}
+@media(prefers-reduced-motion:reduce){#dashboard .home-quicklinks button{animation:none;opacity:1;transform:none;transition:none}}
+
+/* Trade number inputs accept typed values without spinner arrows. */
+:is(#tSize,#tEntry,#tExit,#tPnl)::-webkit-inner-spin-button,
+:is(#tSize,#tEntry,#tExit,#tPnl)::-webkit-outer-spin-button { -webkit-appearance:none; margin:0; }
+:is(#tSize,#tEntry,#tExit,#tPnl) { appearance:textfield; -moz-appearance:textfield; }
 </style>
 <link href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2215%22%20fill%3D%22%2328785e%22%2F%3E%3Cpath%20d%3D%22M13%2042%20L25%2031%20L34%2036%20L50%2019%20M41%2019%20H50%20V28%22%20fill%3D%22none%22%20stroke%3D%22%23fffdf7%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E" rel="icon" type="image/svg+xml"/>
 <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
@@ -2339,59 +2393,12 @@ html[data-theme="dark"] #dashboard .home-privacy-links span{border-color:#686a73
 <div class="wrap editorial-inner">
 <div class="editorial-main"><div class="editorial-copy">
 <h1 class="editorial-headline"><span class="headline-line"><span>This website</span></span><span class="headline-line"><span>helps you trade.</span></span></h1>
-<p class="editorial-description">A few useful tools for the markets. Nothing more complicated than it needs to be.</p>
-<div aria-label="Explore the tools" class="editorial-actions">
-<button class="editorial-action" onclick="switchView('terminal')"><span class="action-copy"><span class="action-eyebrow">A Very Helpful</span><strong>Market Terminal</strong><small>A look at what the markets are up to.</small></span><span aria-hidden="true" class="action-arrow">↗</span></button>
-<button class="editorial-action" onclick="switchView('analytics')"><span class="action-copy"><span class="action-eyebrow">A Very Helpful</span><strong>Trading Journal</strong><small>Keep track. Learn a thing or two.</small></span><span aria-hidden="true" class="action-arrow">↗</span></button>
+<div class="home-quicklinks" aria-label="Explore trading tools"><button type="button" onclick="switchView('terminal')">Market Terminal <span aria-hidden="true">↗</span></button><button type="button" onclick="switchView('analytics')">Trading Journal <span aria-hidden="true">↗</span></button></div>
 </div>
-</div><div aria-hidden="true" class="editorial-art earth-moon-scene">
-<svg aria-label="Rotating Earth and orbiting Moon, with their relative periods represented at a compressed timescale" role="img" viewbox="0 0 560 490" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<radialgradient cx=".31" cy=".26" id="earthOcean" r=".8"><stop stop-color="#6fc2d2"></stop><stop offset=".48" stop-color="#2585a3"></stop><stop offset="1" stop-color="#103e65"></stop></radialgradient>
-<lineargradient id="earthShade"><stop stop-color="#061c2b" stop-opacity=".48"></stop><stop offset=".25" stop-color="#102e46" stop-opacity=".04"></stop><stop offset=".64" stop-color="#102e46" stop-opacity=".06"></stop><stop offset="1" stop-color="#041624" stop-opacity=".76"></stop></lineargradient>
-<radialgradient cx=".3" cy=".26" id="earthLight" r=".75"><stop stop-color="#fff" stop-opacity=".2"></stop><stop offset="1" stop-color="#fff" stop-opacity="0"></stop></radialgradient>
-<radialgradient cx=".25" cy=".23" id="moonStone" r=".8"><stop stop-color="#f3f2e9"></stop><stop offset=".6" stop-color="#c5c8c6"></stop><stop offset="1" stop-color="#7b8791"></stop></radialgradient>
-<clippath id="earthClip"><circle cx="280" cy="244" r="109"></circle></clippath>
-<g id="earthContinents"><g fill="#75ad80" stroke="#9bc59b" stroke-linejoin="round" stroke-width=".9">
-<path d="M 15 35 L 29 22 51 19 70 27 78 42 67 51 59 66 47 71 41 91 28 87 25 70 15 61 8 47 Z"></path>
-<path d="M 57 89 L 75 92 86 110 83 132 72 151 65 170 56 178 50 155 44 132 39 111 Z"></path>
-<path d="M 103 32 L 117 19 132 24 136 37 128 44 116 43 Z"></path>
-<path d="M 130 46 L 148 36 163 42 174 57 177 77 168 96 164 122 151 146 140 143 134 119 122 97 116 76 Z"></path>
-<path d="M 152 26 L 177 17 196 23 215 15 241 23 260 18 286 30 303 45 293 60 275 64 263 79 244 76 236 91 218 83 207 68 188 69 174 56 163 44 Z"></path>
-<path d="M 252 116 L 277 111 296 124 308 144 294 155 270 154 253 142 Z"></path>
-<path d="M 314 37 L 325 30 335 38 333 48 322 51 Z"></path>
-<path d="M 92 178 L 119 185 154 188 189 184 221 192 259 186 297 191 321 182 345 195 342 212 12 212 7 194 35 184 67 189 Z"></path>
-</g><g fill="#b9d8b0" opacity=".45"><path d="M 27 40l18 -11 13 5 -14 15z M 145 60l16 -7 9 21 -15 14z M 191 34l37 -10 19 8 -25 10z M 262 125l22 -7 13 14 -24 7z"></path></g></g>
-<g id="moonShape"><circle fill="url(#moonStone)" r="23"></circle><g fill="#89949a" opacity=".42"><circle cx="-7" cy="-6" r="5"></circle><circle cx="9" cy="5" r="7"></circle><circle cx="-6" cy="12" r="3.5"></circle><circle cx="12" cy="-12" r="3"></circle></g><circle fill="none" r="23" stroke="#e6e6df" stroke-opacity=".6" stroke-width="1"></circle></g>
-</defs>
-<!-- The orbital track is a visual projection, not a literal physical ring. -->
-<ellipse cx="280" cy="244" fill="none" rx="198" ry="67" stroke="#83a8a4" stroke-opacity=".23" stroke-width="1.2" transform="rotate(-14 280 244)"></ellipse>
-<g class="earth-moon-back"><use href="#moonShape"></use></g>
-<circle cx="280" cy="244" fill="none" r="118" stroke="#73bed1" stroke-opacity=".12" stroke-width="8"></circle>
-<circle cx="280" cy="244" fill="url(#earthOcean)" r="109"></circle>
-<g clip-path="url(#earthClip)">
-<g class="earth-map" transform="translate(170 134)"><use href="#earthContinents"></use><use href="#earthContinents" x="360"></use></g>
-<path d="M 181 213q48 -33 90 -4t102 1 M 174 266q56 28 112 3t101 -6 M 207 177q38 16 69 0t71 4" fill="none" stroke="#fff" stroke-linecap="round" stroke-opacity=".16" stroke-width="9"></path>
-<circle cx="280" cy="244" fill="url(#earthShade)" r="109"></circle>
-<circle cx="280" cy="244" fill="url(#earthLight)" r="109"></circle>
-</g>
-<circle cx="280" cy="244" fill="none" r="109" stroke="#c0e9e8" stroke-opacity=".48" stroke-width="1.5"></circle>
-<g class="earth-moon-front"><use href="#moonShape"></use></g>
-</svg></div>
-
 </div>
 </div></section>
-<div class="home-content" id="homeContent">
-<section aria-labelledby="homeAboutTitle" class="home-about home-block home-reveal">
-<div class="home-about-grid"><div class="home-about-copy"><span class="home-kicker">SOME CONTEXT</span><h2 id="homeAboutTitle">About this <em>website.</em></h2><p>This Website Helps You Trade is a collection of practical trading tools, a journal, market information and a little education. Nothing revolutionary. Just a few things that might make the process easier.</p><p>It's built around a simple idea: useful information should be straightforward to find, understand and use.</p></div><div aria-hidden="true" class="home-about-art home-pendulums"><div class="pendulum-frame"><div class="pendulum-rail"></div><div class="pendulum-arm"><i></i></div><div class="pendulum-arm"><i></i></div><div class="pendulum-arm"><i></i></div><div class="pendulum-arm"><i></i></div><div class="pendulum-arm"><i></i></div></div></div></div>
-<div class="home-roadmap home-reveal"><div><span class="home-kicker">STILL IN THE WORKS</span><h3>Upcoming features<span class="home-period">.</span></h3><p>Some additions we're working towards. Coming soon.</p></div><div class="home-roadmap-items"><div><span class="home-roadmap-index">01</span><span>Expanded CSV import support for more trading brokers and platforms.</span></div><div><span class="home-roadmap-index">02</span><span>Live market data for the terminal.</span></div><div><span class="home-roadmap-index">03</span><span>A dedicated education page with free courses and more.</span></div></div></div>
 </section>
-
-
-<section aria-labelledby="homePrivacyTitle" class="home-privacy home-block home-reveal"><div aria-hidden="true" class="home-privacy-icon">◎</div><div><h2 id="homePrivacyTitle">Privacy statement.</h2><p>Your Trading Journal is designed to store entries in your browser on this device. Browser data can be cleared, so export a backup if you want to keep your trades. We don't claim that the tools or educational content constitute financial advice.</p><p>This website uses Google Analytics to understand site visits. Google may process usage information according to its own privacy terms. This summary is not a substitute for a full privacy policy.</p><p>© 2026 This Website Helps You Trade. All rights reserved.</p></div></section>
-</div>
-</section>
-<section class="view terminal" id="terminal"><div class="termhead"><div class="termheadin"><div><div class="eyebrow">a very helpful</div><h1>Market Terminal</h1><p>Market session information and calendars in one place.</p></div><div class="clock"><strong id="localClock">--:--:--</strong><span id="localZone">Local time</span></div></div></div><div class="termwrap">
+<section class="view terminal" id="terminal"><div class="termhead"><div class="termheadin"><div><h1>Market Terminal</h1></div><div class="clock"><strong id="localClock">--:--:--</strong><span id="localZone">Local time</span></div></div></div><div class="termwrap">
 <section class="termsec"><div class="sectitle"><h2>Global sessions</h2></div><div class="sessions" id="sessionCards"></div></section>
 <div class="terminal-data-notice" role="note"><strong>Sample data:</strong> Economic events and earnings calendar entries are placeholders, not live or verified market information. Please do not rely on them for trading decisions.</div>
 <div class="termgrid terminal-calendars"><section class="panel calendar-panel"><div class="panelbar"><h3>Economic events</h3><button aria-controls="economicFilterPanel" aria-expanded="false" class="calendar-filter-btn" onclick="toggleCalendarFilters('economicFilterPanel',this)" type="button">Filters <span aria-hidden="true">▾</span></button></div><div class="filters dropdown-filters calendar-filter-panel" hidden="" id="economicFilterPanel">
@@ -2400,7 +2407,7 @@ html[data-theme="dark"] #dashboard .home-privacy-links span{border-color:#686a73
 <div class="calendar-table-scroll"><div class="econ hdr"><span>Time</span><span class="calendar-icon-col"></span><span>CCY</span><span>Event</span><span>Actual</span><span>Forecast</span><span>Previous</span></div><div id="econRows"></div></div></section><section class="panel calendar-panel"><div class="panelbar"><h3>Earnings calendar</h3><button aria-controls="earningsFilterPanel" aria-expanded="false" class="calendar-filter-btn" onclick="toggleCalendarFilters('earningsFilterPanel',this)" type="button">Filters <span aria-hidden="true">▾</span></button></div><div class="filters dropdown-filters calendar-filter-panel" hidden="" id="earningsFilterPanel"><label>Session<select id="earningsSessionSelect" onchange="renderEarningsCalendar()"><option value="ALL">All sessions</option><option value="pre">Pre-market</option><option value="post">After-hours</option></select></label></div>
 <div class="calendar-table-scroll"><div class="earn hdr"><span>Date</span><span class="calendar-icon-col"></span><span>Company</span><span>EPS est.</span><span>Mkt cap</span></div><div id="earnRows"></div></div></section></div>
 </div></section>
-<section class="view" id="analytics"><div class="ahead"><div class="aheadin"><div><div class="eyebrow">a very helpful</div><h1>Trading Journal</h1><p>Import trades via CSV or add them manually. Your stats update automatically.</p></div><div class="actions">
+<section class="view" id="analytics"><div class="ahead"><div class="aheadin"><div><h1>Trading Journal</h1></div><div class="actions">
 <button class="btn" id="editDayBtn" onclick="openDayEditor()" style="background:#00a56a;border-color:#00a56a;color:#082a20">View day</button>
 <div class="journal-settings" id="journalSettings">
 <button aria-controls="journalSettingsMenu" aria-expanded="false" aria-label="Journal settings" class="journal-settings-toggle" id="journalSettingsToggle" onclick="toggleJournalSettings()" title="Journal settings" type="button"><svg aria-hidden="true" class="journal-cog-icon" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
@@ -2416,7 +2423,7 @@ html[data-theme="dark"] #dashboard .home-privacy-links span{border-color:#686a73
 </div>
 <input accept=".csv,.xlsx,.xls" id="csvInput" onchange="importCSV(event)" type="file">
 </input></div></div></div><div class="awrap">
-<div class="metrics"><div class="metric"><label>Profit Factor <span aria-label="About Profit Factor" class="metric-help" tabindex="0">?<span class="metric-tip">This ratio shows gross profits relative to gross losses. Above 1 means profits exceed losses.</span></span></label><strong id="mPF">—</strong></div><div class="metric"><label>P&amp;L Ratio <span aria-label="About P&amp;L Ratio" class="metric-help" tabindex="0">?<span class="metric-tip">This ratio compares your average winning trade with your average losing trade.</span></span></label><strong id="mRatio">—</strong></div><div class="metric"><label>Win Rate <span aria-label="About Win Rate" class="metric-help" tabindex="0">?<span class="metric-tip">Win Rate demonstrates the percentage of trades that finish in profit.</span></span></label><strong id="mWin">—</strong></div><div class="metric"><label>Trade Expectancy <span aria-label="About Trade Expectancy" class="metric-help" tabindex="0">?<span class="metric-tip">Trade Expectancy reveals your average profit or loss per trade.</span></span></label><strong id="mExp">—</strong></div></div>
+<div class="metrics"><div class="metric"><label>Profit Factor </label><strong id="mPF">—</strong></div><div class="metric"><label>P&amp;L Ratio </label><strong id="mRatio">—</strong></div><div class="metric"><label>Win Rate </label><strong id="mWin">—</strong></div><div class="metric"><label>Trade Expectancy </label><strong id="mExp">—</strong></div></div>
 <div class="agrid"><div><div class="calhead"><h2 id="performanceTitle">September 2026</h2><div class="calendar-controls"><div aria-label="Journal period" class="scope-switch" role="tablist"><button aria-selected="true" class="active" id="monthScopeBtn" onclick="setJournalScope('month')" type="button">Monthly</button><button aria-selected="false" id="yearScopeBtn" onclick="setJournalScope('year')" type="button">Yearly</button></div><div class="mnav" id="monthNav"><button aria-label="Previous month" onclick="shiftMonth(-1)">←</button><div class="month-picker-wrap"><button aria-expanded="false" aria-haspopup="dialog" aria-label="Choose month and year" class="month-picker-trigger" id="monthPickerTrigger" onclick="toggleMonthPicker(event)" type="button"><span id="monthLabel"></span></button><div aria-label="Choose month and year" class="month-popover" id="monthPopover" role="dialog"><div class="month-picker-head"><button aria-label="Previous year" class="month-year-nav" onclick="changePickerYear(-1,event)" type="button">←</button><div class="month-year-control" id="monthYearControl"><button class="month-year-button" id="monthPickerYear" onclick="editPickerYear(event)" type="button"></button><input aria-label="Year" class="month-year-input" id="monthYearInput" max="2200" min="1900" onblur="commitPickerYear()" onkeydown="pickerYearKey(event)" type="number"/></div><button aria-label="Next year" class="month-year-nav" onclick="changePickerYear(1,event)" type="button">→</button></div><div class="month-grid" id="monthGrid"></div></div></div><button aria-label="Next month" onclick="shiftMonth(1)">→</button></div><div class="yearnav" id="yearNav"><button aria-label="Previous year" onclick="shiftYear(-1)">←</button><span id="yearLabel">2026</span><button aria-label="Next year" onclick="shiftYear(1)">→</button></div></div></div><div class="calscroll calendar-stage" id="calendarStage"><div class="cal" id="calGrid"></div><div class="year-grid" id="yearGrid"></div></div></div><aside class="side"><div class="mtotal"><label id="periodTotalLabel">Monthly total</label><strong id="monthPnl">$0</strong><span><b id="monthDays">0</b> <span id="periodDaysLabel">days traded</span></span></div><div class="selected" id="daySummary"><div class="date" id="selectedDate">Select a trading day</div><h3 id="selectedPnl">$0</h3><div class="slist"><div><span>Trades</span><b id="sTrades">—</b></div><div><span>Win rate</span><b id="sWin">—</b></div><div><span>Average winner</span><b id="sAvgWin">—</b></div><div><span>Average loser</span><b id="sAvgLoss">—</b></div></div>
 <div class="day-notes" id="dayNotesDisplay" style="display:none"><div class="day-notes-label">Notes</div><div class="day-notes-text" id="dayNotesText"></div></div>
 </div></aside></div>
@@ -2434,13 +2441,13 @@ html[data-theme="dark"] #dashboard .home-privacy-links span{border-color:#686a73
 <div aria-labelledby="editorTitle" aria-modal="true" class="modal day-editor" role="dialog">
 <div class="modalhead day-editor-head"><div><div class="day-editor-eyebrow">TRADING JOURNAL / DAILY REVIEW</div><h3 id="editorTitle">Your trading day</h3></div><button aria-label="Close day editor" onclick="closeModal()" type="button">×</button></div>
 <div class="day-editor-overview"><div><span>Daily net P&amp;L</span><strong id="modalDayPnl">$0.00</strong></div><div><span>Trades recorded</span><strong id="modalDayCount">0</strong></div><div><span>Winning trades</span><strong id="modalDayWins">0</strong></div></div>
-<div aria-label="Daily journal sections" class="day-editor-tabs" role="tablist"><button class="active" data-day-tab="trades" onclick="switchDayTab('trades')" type="button">Trades <span id="modalTradesBadge">0</span></button><button data-day-tab="notes" onclick="switchDayTab('notes')" type="button">Day notes</button><button data-day-tab="add" onclick="switchDayTab('add')" type="button">+ Add trade</button></div>
+<div aria-label="Daily journal sections" class="day-editor-tabs" role="tablist"><button class="active" data-day-tab="trades" onclick="switchDayTab('trades')" type="button">Trades <span id="modalTradesBadge">0</span></button><button data-day-tab="notes" onclick="switchDayTab('notes')" type="button">Notes</button></div>
 <div class="day-editor-content">
-<section class="day-editor-panel active" data-day-panel="trades"><div class="day-editor-sectionhead"><div><h4>Trades on this day</h4><p>Review individual positions, edit entries or remove a trade.</p></div><button class="btn" onclick="clearTradeForm();switchDayTab('add')" type="button">+ Add trade</button></div><div class="day-trade-list" id="dayTradeList"></div></section>
-<section class="day-editor-panel" data-day-panel="notes"><div class="day-editor-sectionhead"><div><h4>Daily notes</h4><p>Record what worked, what didn't, and what to improve.</p></div></div><div class="daily-notes-field"><label for="dailyNotesInput">Your notes for this day</label><textarea id="dailyNotesInput" placeholder="What did you notice about your trades today?" rows="8"></textarea><div class="daily-notes-actions"><span aria-live="polite" id="dailyNotesSaved"></span><button class="btn" onclick="saveCurrentDayNote()" type="button">Save notes</button></div></div></section>
-<section class="day-editor-panel" data-day-panel="add"><div class="day-editor-sectionhead"><div><h4 id="tradeFormHeading">Add a trade</h4><p>Enter trade details below. Changes are saved to your journal.</p></div></div><form onsubmit="saveEditedTrade(event)"><div class="modalgrid"><input id="editTradeIndex" type="hidden" value=""/><div class="field"><label>Date</label><input id="tDate" required="" type="date"/></div><div class="field"><label>Symbol</label><input id="tSymbol" placeholder="e.g. EURUSD" required=""/></div><div class="field"><label>Side</label><select id="tSide"><option>Long</option><option>Short</option></select></div><div class="field"><label>Size</label><input id="tSize" required="" step="any" type="number" value="1"/></div><div class="field"><label>Entry</label><input id="tEntry" required="" step="any" type="number"/></div><div class="field"><label>Exit</label><input id="tExit" required="" step="any" type="number"/></div><div class="field full"><label>Net P&amp;L</label><input id="tPnl" required="" step="any" type="number"/></div></div><div class="modalactions"><button class="btn light" onclick="clearTradeForm()" type="button">Reset form</button><button class="btn" id="saveTradeBtn">Add trade</button></div></form></section>
+<section class="day-editor-panel active" data-day-panel="trades"><div class="day-editor-sectionhead"><div><h4>Trades on this day</h4></div><button class="btn" onclick="clearTradeForm();switchDayTab('add')" type="button">+ Add trade</button></div><div class="day-trade-list" id="dayTradeList"></div></section>
+<section class="day-editor-panel" data-day-panel="notes"><div class="daily-notes-field"><textarea id="dailyNotesInput" placeholder="What did you notice about your trades today?" rows="8"></textarea><div class="daily-notes-actions"><span aria-live="polite" id="dailyNotesSaved"></span><button class="btn" onclick="saveCurrentDayNote()" type="button">Save notes</button></div></div></section>
+<section class="day-editor-panel" data-day-panel="add"><div class="day-editor-sectionhead"><div><h4 id="tradeFormHeading">Add a trade</h4></div></div><form onsubmit="saveEditedTrade(event)"><div class="modalgrid"><input id="editTradeIndex" type="hidden" value=""/><div class="field"><label>Date</label><input id="tDate" required="" type="date"/></div><div class="field"><label>Symbol</label><input id="tSymbol" placeholder="e.g. EURUSD" required=""/></div><div class="field"><label>Side</label><select id="tSide"><option>Long</option><option>Short</option></select></div><div class="field"><label>Size</label><input id="tSize" required="" step="any" type="number" value="1"/></div><div class="field"><label>Entry</label><input id="tEntry" required="" step="any" type="number"/></div><div class="field"><label>Exit</label><input id="tExit" required="" step="any" type="number"/></div><div class="field full"><label>Net P&amp;L</label><input id="tPnl" required="" step="any" type="number"/></div></div><div class="modalactions"><button class="btn light" onclick="clearTradeForm()" type="button">Reset form</button><button class="btn" id="saveTradeBtn">Add trade</button></div></form></section>
 </div>
-<div class="day-editor-foot"><span>Changes to trades are saved in this browser.</span><button onclick="closeModal()" type="button">Done</button></div>
+<div class="day-editor-foot"><button onclick="closeModal()" type="button">Done</button></div>
 </div>
 </div>
 <script>
