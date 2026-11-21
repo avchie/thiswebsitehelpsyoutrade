@@ -2263,6 +2263,46 @@ body:has(#dashboard.active) footer{display:none}
 :is(#tSize,#tEntry,#tExit,#tPnl)::-webkit-inner-spin-button,
 :is(#tSize,#tEntry,#tExit,#tPnl)::-webkit-outer-spin-button { -webkit-appearance:none; margin:0; }
 :is(#tSize,#tEntry,#tExit,#tPnl) { appearance:textfield; -moz-appearance:textfield; }
+
+/* Journal: readable notes and theme-specific dialog veils. */
+html[data-theme="dark"] #analytics #dayNotesText,
+html[data-theme="dark"] #analytics .day-notes-text{color:#f1f2f5!important;}
+html[data-theme="dark"] #analytics .day-notes-label{color:#d5d7dd!important;}
+html[data-theme="dark"] #sitePrompt{
+  background:rgba(9,10,15,.76)!important;
+  backdrop-filter:blur(6px) saturate(.78);
+  -webkit-backdrop-filter:blur(6px) saturate(.78);
+}
+/* Keep menu labels stationary while the settings dropdown animates. */
+#analytics .journal-settings-menu{transform-origin:top right;transition:opacity .22s ease,transform .26s cubic-bezier(.16,1,.3,1),visibility .22s;}
+#analytics .journal-settings-menu button{transform:none!important;transition:background .15s ease,color .15s ease;}
+html[data-theme="dark"] #tradeModal.modalbg{
+  background:rgba(9,10,15,.76)!important;
+  backdrop-filter:blur(6px) saturate(.78);
+}
+html[data-theme="dark"] .modalbg:not(#tradeModal){
+  background:rgba(9,10,15,.76)!important;
+  backdrop-filter:blur(6px) saturate(.78);
+}
+
+/* Settings dropdown: animate only opacity and position, never scale text. */
+#analytics .journal-settings-menu{transform:translateY(-8px)!important;transition:opacity .22s ease,transform .26s cubic-bezier(.16,1,.3,1),visibility .22s!important;}
+#analytics .journal-settings.open .journal-settings-menu{transform:translateY(0)!important;}
+
+/* Journal: subtle divider in dark mode, matching light-mode contrast. */
+html[data-theme="dark"] #analytics .log{border-top-color:#515257!important;}
+
+/* Keep the sticky site navigation above the journal settings and its menu. */
+.top{z-index:150!important;}
+#analytics .ahead{position:relative;z-index:1;}
+
+
+/* Market Terminal: improve session-card readability without enlarging cards. */
+#terminal .session .pill{font-size:13px;letter-spacing:.035em;line-height:1.25}
+#terminal .session .smeta{font-size:12.5px;line-height:1.25;gap:5px 8px;margin-top:9px}
+#terminal .session .smeta strong{font-size:12.5px;line-height:1.25}
+#terminal .session .countdown{font-size:12.5px;line-height:1.25;letter-spacing:.025em;margin-top:9px;padding-top:7px}
+#terminal .session .countdown strong{font-size:14px;letter-spacing:.01em}
 </style>
 <link href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2215%22%20fill%3D%22%2328785e%22%2F%3E%3Cpath%20d%3D%22M13%2042%20L25%2031%20L34%2036%20L50%2019%20M41%2019%20H50%20V28%22%20fill%3D%22none%22%20stroke%3D%22%23fffdf7%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E" rel="icon" type="image/svg+xml"/>
 <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
@@ -2601,15 +2641,15 @@ function closeJournalSettings(){toggleJournalSettings(false)}
 document.addEventListener('click',e=>{if(!e.target.closest('#journalSettings'))closeJournalSettings()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeJournalSettings()});
 function clearAllTradeData(){
-  showSitePrompt('This will permanently delete all trading journal data. To confirm, type clear data below.',performClearAllTradeData,{title:'Clear all data?',confirmLabel:'Clear data'});
+  showSitePrompt('This will permanently delete all trading journal data. Type CONFIRM to continue',performClearAllTradeData,{title:'Clear all data?',confirmLabel:'Clear data'});
   const message=document.getElementById('sitePromptMessage');
   const verify=document.createElement('div');
   verify.className='clear-data-verification';
-  verify.innerHTML='<label for="clearDataPhrase">Type <strong>clear data</strong> to continue</label><input id="clearDataPhrase" type="text" autocomplete="off" spellcheck="false" placeholder="clear data" aria-label="Type clear data to confirm">';
+  verify.innerHTML='<input id="clearDataPhrase" type="text" autocomplete="off" spellcheck="false" aria-label="Type CONFIRM to continue">';
   message.insertAdjacentElement('afterend',verify);
   const input=verify.querySelector('input'),button=document.getElementById('sitePromptConfirm');
   button.disabled=true;
-  input.addEventListener('input',()=>{button.disabled=input.value.trim().toLowerCase()!=='clear data'});
+  input.addEventListener('input',()=>{button.disabled=input.value.trim().toUpperCase()!=='CONFIRM'});
   input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!button.disabled)resolveSitePrompt(true)});
   input.focus();
 }
@@ -3285,8 +3325,10 @@ function deselectDay(){
   renderDayNote();
 }
 document.addEventListener("click",e=>{
-  if(!selectedDayKey)return;
-  if(e.target.closest(".day")||e.target.closest("#tradeModal")||e.target.closest("#editDayBtn"))return;
+  if(!selectedDayKey || !e.target.closest("#analytics"))return;
+  // Only clear selection on unused journal background, never on widgets,
+  // statistics, the calendar controls, trade rows, or popup triggers.
+  if(e.target.closest(".day, .year-month, .wtotal, .metrics, .metric, .side, .mtotal, .selected, .calhead, .calendar-controls, .year-grid, .log, .ahead, button, a, input, select, textarea, .journal-settings-menu, .month-popover"))return;
   deselectDay();
 });
 
